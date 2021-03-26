@@ -1,0 +1,121 @@
+\input regularDraftTemplate.tex
+
+\begin{document}
+
+\begin{center}
+{\bf Title} \bsk\\
+    Name~\footnote{email1@website1}~\textsuperscript{1} 
+    and Possibly others~\footnote{email2@website2}~\textsuperscript{2}\\
+{\em \textsuperscript{1} Institution 1.}\\
+{\em \textsuperscript{2} Institution(s)}\\
+Date: March 25, 2021
+\end{center}
+
+\begin{abstract}
+Words
+\end{abstract}
+
+\section{Section}
+\label{Label1}
+\xb
+\outl{Outline for this section will not appear in pdf unless changes are made
+in the OUTLINE IN TEXT part of the template}
+\xa
+
+Some more words.
+
+\subsection{Sub-Section}
+\label{Label2}
+\xb
+\outl{Outline for this sub-sections}
+\xa
+
+Words again. We cite a paper~\cite{AuthorYear} in {\tt aBibFile.bib} using
+BibTeX. To compile this file run {\tt pdflatex} then {\tt biblatex} and
+then {\tt pdflatex} two more times.
+
+\begin{equation}
+    a = b + c
+    \label{anEqn}
+\end{equation}
+%
+Cite this equation later using~\eqref{anEqn}. This paper has Supporting
+information~(SI) sections like~\ref{Supp} and that SI has~\ref{AppASub}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{aBibFile}
+\bibliographystyle{unsrt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% SUPPORTING INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\np
+\begin{center}
+{\bf Supporting Information with ``Title''} \bsk\\
+    Name~\footnote{email1@website1}~\textsuperscript{1} 
+    and Possibly others~\footnote{email2@website2}~\textsuperscript{2}\\
+{\em \textsuperscript{1} Institution 1.}\\
+{\em \textsuperscript{2} Institution(s)}\\
+Date: March 25, 2021
+    \label{support}
+\end{center}
+
+%Renew Equation Counter 
+\setcounter{equation}{0}
+\renewcommand{\theequation}{S\arabic{equation}}
+\counterwithin*{equation}{section}
+
+%Renew Section Counter 
+\setcounter{section}{0}
+
+%Prefix sections numbers with SI-
+\renewcommand{\thesection}{SI-\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\section{Section for Support}
+\label{Supp}
+%
+\begin{equation}
+    x = y - z
+    \label{xyz}
+\end{equation}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% APPENDIX TO SUPPORTING INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Renew Equation Counter 
+\renewcommand{\theequation}{\Alph{section}\arabic{equation}}
+
+%
+%%Prefix sections numbers with Appendix-
+\renewcommand{\thesection}{Appendix~\Alph{section}}
+\renewcommand{\thefigure}{\Alph{figure}}
+%
+
+%Renew Section Counter 
+\setcounter{section}{0}
+
+\section{Section}
+
+\begin{equation}
+    c = d + e
+    \label{Eqn2}
+\end{equation}
+%
+\subsection{Sub-section}
+\label{AppASub}
+
+\section{New Section}
+
+\begin{equation}
+    k := k_1 k_2
+    \label{EqnD}
+\end{equation}
+
+\end{document}

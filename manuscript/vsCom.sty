@@ -1,0 +1,228 @@
+% Definitions for Latex2e amsmath
+% GENERAL, MATH CAL (SCRIPT), BOLD FACE, BLACKBOARD BOLD, GREEK
+
+		% GENERAL LIST
+\long\def\ca#1\cb{} %Use for commenting out: \ca...\cb
+
+\newcommand{\ad}{^\dagger }
+\newcommand{\adp}{^{\phantom{\dagger}}}
+\newcommand{\AND}{{\small AND}}
+\newcommand{\Arg}{\mathop{\rm Arg}\nolimits}
+\newcommand{\avg}[1]{\langle #1\rangle }
+\newcommand{\becs}{\begin{cases}}
+\newcommand{\bem}{\begin{matrix}}
+\newcommand{\blp}{\bigl(} 
+\newcommand{\Blp}{\Bigl(} 
+\newcommand{\bpp}[1]{\bigl(#1\bigr)}
+\newcommand{\Bpp}[1]{\Bigl(#1\Bigr)}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\Brp}{\Bigr)}
+\newcommand{\brp}{\bigr)}
+\newcommand{\bsk}{\bigskip }
+\newcommand{\bsl}{$\backslash$}
+\newcommand{\ck}{\breve }
+\newcommand{\cln}{\colon\!} %Symmetrizes some math expressions
+\newcommand{\coln}{\hbox{:}}
+\newcommand{\colo}{\,\hbox{:}\,}
+\newcommand{\Cov}{{\rm Cov}}
+\newcommand{\Det}{{\rm Det}}
+\newcommand{\dg}{^\circ } %Degree
+\newcommand{\dst}{\displaystyle } %\tst for textstyle
+\newcommand{\dya}[1]{|#1\rangle\langle#1|}
+\newcommand{\dyad}[2]{|#1\rangle\langle#2|}
+\newcommand{\emp}{\emptyset }
+\newcommand{\encs}{\end{cases}}
+\newcommand{\enm}{\end{matrix}}
+\newcommand{\fac}{\mspace{1mu}!}
+\newcommand{\hf}{{\textstyle\frac{1}{2} }}
+\newcommand{\Hf}{\frac{1}{2} }
+\newcommand{\hquad}{\mspace{8 mu}} 
+\newcommand{\inp}[1]{\langle#1|#1\rangle }
+\newcommand{\inpV}[2]{\langle#1,#2\rangle }
+\newcommand{\inpd}[2]{\langle#1|#2\rangle }
+\newcommand{\ket}[1]{|#1\rangle }
+\newcommand{\lbrk}[1]{\left\{\vrule height #1cm depth #1cm width 0pt\right.}
+\newcommand{\Ln}{\mathop{\rm Ln}\nolimits}
+\renewcommand{\Im}{\hbox{Im}} %Imaginary, replaces standard Tex definition
+\newcommand{\lgl}{\langle } 
+\newcommand{\lp}{\left(} % And see \rp
+\newcommand{\Lp}{\Bigl(}  % And see \Rp
+\newcommand{\lra}{\leftrightarrow }
+\newcommand{\mab}[1]{\begin{matrix}#1\end{matrix}}
+\newcommand{\mat}[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+\newcommand{\matd}[1]{\left|\begin{matrix}#1\end{matrix}\right|}
+\newcommand{\mns}{\negmedspace - \negmedspace }
+% \renewcommand{\mod}{\mathop{\rm mod}\nolimits} %Replaces Latex form
+\newcommand{\msk}{\medskip }
+\newcommand{\mt}{\mapsto }
+\newcommand{\mte}[2]{\langle#1|#2|#1\rangle }
+\newcommand{\mted}[3]{\langle#1|#2|#3\rangle }
+\newcommand{\negg}{\sim\!} %Also see \sm
+\newcommand{\nid}{\noindent }
+\newcommand{\NOT}{{\small NOT}}
+\newcommand{\od}{\odot }
+\newcommand{\OR}{{\small OR}}
+\newcommand{\ot}{\otimes }
+\newcommand{\phd}[1]{\vphantom{\vrule height 0pt depth #1}} %\phd{4ex}
+\newcommand{\phu}[1]{\vphantom{\vrule height #1 depth 0pt}} %\phu{10pt}
+\newcommand{\pls}{\negmedspace + \negmedspace }
+\newcommand{\pr}{\partial }
+\newcommand{\pval}{\rlap{$\mspace{5mu}-$}}%\pval\int ->principal value integral
+\newcommand{\ra}{\rightarrow }
+\newcommand{\Ra}{\Rightarrow }
+\newcommand{\rbrk}[1]{\left.\vrule height #1cm depth #1cm width 0pt\right\}}
+\renewcommand{\Re}{\hbox{Re}} %Real, replaces standard Tex definition
+\newcommand{\rgl}{\rangle }
+%\newcommand{\Rn}{{\rm Rn}}
+\newcommand{\rp}{\right)}
+\newcommand{\Rp}{\Bigr)}
+\newcommand{\sep}{\centerline{\vrule height 0.5pt depth 0pt width 8cm}}
+\newcommand{\sepb}{%
+\vspace{-3ex}\begin{center}\vrule height 0.5pt depth 0pt width 8cm\end{center}}
+\newcommand{\sgn}{\mathop{\rm sgn}}
+\newcommand{\sm}{\sim\!\!} %Also see \negg
+\newcommand{\ssk}{\smallskip }
+\newcommand{\st}{\sqrt{2}}
+\newcommand{\tm}{\times }
+\newcommand{\Tr}{{\rm Tr}}
+\newcommand{\trp}{^\textup{T}}
+\newcommand{\tst}{\textstyle } %See \dst for displaystyle
+\newcommand{\ttt}{\texttt}
+\newcommand{\Var}{{\rm Var}}
+\newcommand{\vb}{\,|\,}
+\newcommand{\vbb}{\mspace{1mu}|\mspace{1mu}}
+\newcommand{\vbB}{\boldsymbol{\mid}}
+\newcommand{\vbl}{\,\boldsymbol{|}\,}
+
+
+		% MATH CAL (SCRIPT)
+
+\newcommand{\AC}{{\mathcal A}}
+\newcommand{\BC}{{\mathcal B}}
+\newcommand{\CC}{{\mathcal C}}
+\newcommand{\DC}{{\mathcal D}}
+\newcommand{\EC}{{\mathcal E}}
+\newcommand{\FC}{{\mathcal F}}
+\newcommand{\GC}{{\mathcal G}}
+\newcommand{\HC}{{\mathcal H}}
+\newcommand{\IC}{{\mathcal I}}
+\newcommand{\JC}{{\mathcal J}}
+\newcommand{\KC}{{\mathcal K}}
+\newcommand{\LC}{{\mathcal L}}
+\newcommand{\MC}{{\mathcal M}}
+\newcommand{\NC}{{\mathcal N}}
+\newcommand{\OC}{{\mathcal O}}
+\newcommand{\PC}{{\mathcal P}}
+\newcommand{\QC}{{\mathcal Q}}
+\newcommand{\RC}{{\mathcal R}}
+\newcommand{\SC}{{\mathcal S}}
+\newcommand{\TC}{{\mathcal T}}
+\newcommand{\UC}{{\mathcal U}}
+\newcommand{\VC}{{\mathcal V}}
+\newcommand{\WC}{{\mathcal W}}
+\newcommand{\XC}{{\mathcal X}}
+\newcommand{\YC}{{\mathcal Y}}
+\newcommand{\ZC}{{\mathcal Z}}
+
+
+		% BOLD FACE
+
+\newcommand{\bld}[1]{\boldsymbol{#1}}
+
+	% CAPS BOLD FACE
+
+\newcommand{\AB}{\textbf{A}}
+\newcommand{\BB}{\textbf{B}}
+\newcommand{\CB}{\textbf{C}}
+\newcommand{\DB}{\textbf{D}}
+\newcommand{\EB}{\textbf{E}}
+\newcommand{\FB}{\textbf{F}}
+\newcommand{\GB}{\textbf{G}}
+\newcommand{\HB}{\textbf{H}}
+\newcommand{\IB}{\textbf{I}}
+\newcommand{\JB}{\textbf{J}}
+\newcommand{\KB}{\textbf{K}}
+\newcommand{\LB}{\textbf{L}}
+\newcommand{\MB}{\textbf{M}}
+\newcommand{\NB}{\textbf{N}}
+\newcommand{\OB}{\textbf{O}}
+\newcommand{\PB}{\textbf{P}}
+\newcommand{\QB}{\textbf{Q}}
+\newcommand{\RB}{\textbf{R}}
+\newcommand{\SB}{\textbf{S}}
+\newcommand{\TB}{\textbf{T}}
+\newcommand{\UB}{\textbf{U}}
+\newcommand{\VB}{\textbf{V}}
+\newcommand{\WB}{\textbf{W}}
+\newcommand{\XB}{\textbf{X}}
+\newcommand{\YB}{\textbf{Y}}
+\newcommand{\ZB}{\textbf{Z}}
+
+	% LOWER CASE BOLD FACE
+
+\newcommand{\aB}{\textbf{a}}
+\newcommand{\bB}{\textbf{b}}
+\newcommand{\cB}{\textbf{c}}
+\newcommand{\dB}{\textbf{d}}
+\newcommand{\eB}{\textbf{e}}
+\newcommand{\fB}{\textbf{f}}
+\newcommand{\gB}{\textbf{g}}
+\newcommand{\hB}{\textbf{h}}
+\newcommand{\iB}{\textbf{i}}
+\newcommand{\jB}{\textbf{j}}
+\newcommand{\kB}{\textbf{k}}
+\newcommand{\lB}{\textbf{l}}
+\newcommand{\mB}{\textbf{m}}
+\newcommand{\nB}{\textbf{n}}
+\newcommand{\oB}{\textbf{o}}
+\newcommand{\pB}{\textbf{p}}
+\newcommand{\qB}{\textbf{q}}
+\newcommand{\rB}{\textbf{r}}
+\newcommand{\sB}{\textbf{s}}
+\newcommand{\tB}{\textbf{t}}
+\newcommand{\uB}{\textbf{u}}
+\newcommand{\vB}{\textbf{v}}
+\newcommand{\wB}{\textbf{w}}
+\newcommand{\xB}{\textbf{x}}
+\newcommand{\yB}{\textbf{y}}
+\newcommand{\zB}{\textbf{z}}
+
+	% SPECIAL BOLD
+\newcommand{\zrB}{\textbf{0}}
+
+		% BLACKBOARD BOLD
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\Rbb}{\mathbb{R}}
+
+                % GREEK
+% The following Greek definitions do not replace
+% anything in Tex or Latex.  
+%The following are NOT abbreviated: eta mu nu xi pi rho tau phi chi psi
+% omicron does not occur: use o
+% The following caps are NOT abbreviated: Xi, Pi, Phi, Psi
+\newcommand{\al}{\alpha }
+\newcommand{\bt}{\beta }
+\newcommand{\gm}{\gamma }
+\newcommand{\Gm}{\Gamma }
+\newcommand{\dl}{\delta }
+\newcommand{\Dl}{\Delta }
+\newcommand{\ep}{\epsilon}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\zt}{\zeta }
+\renewcommand{\th}{\theta } %Latex \th = thor n
+\newcommand{\vth}{\vartheta }
+\newcommand{\Th}{\Theta }
+\newcommand{\io}{\iota }
+\newcommand{\kp}{\kappa }
+\newcommand{\lm}{\lambda }
+\newcommand{\Lm}{\Lambda }
+\newcommand{\vpi}{\varpi}
+\newcommand{\vrh}{\varrho}
+\newcommand{\sg}{\sigma }
+\newcommand{\vsg}{\varsigma}
+\newcommand{\Sg}{\Sigma }
+\newcommand{\up}{\upsilon }
+\newcommand{\Up}{\Upsilon }
+\newcommand{\vph}{\varphi }
+\newcommand{\om}{\omega }
+\newcommand{\Om}{\Omega }

@@ -1,0 +1,96 @@
+\documentclass[10pt]{article}
+\usepackage{caption}
+
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+
+%To adjust how the equation counters change
+\usepackage{chngcntr}
+
+%Math related packages
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{enumerate}
+\usepackage{url}
+
+%Font settings
+\usepackage{lmodern}
+\usepackage{newpxtext}
+
+%Fancy footnote
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%Tiks for figures and colors for Citations
+\usepackage{tikz}
+\definecolor{darkblue}{rgb}{0.15,0.35,0.55}
+\definecolor{reddish}{rgb}{.8, 0.2, 0.2}
+
+%Hyperreff is best loaded last, it can conflict with other packages
+%Setting hypertexnames to false avoids come issues with \label command
+\usepackage[pdfpagelabels, linktocpage=true, hypertexnames=false]{hyperref}
+\hypersetup{
+colorlinks=true,
+citecolor=darkblue,
+linkcolor=reddish,
+urlcolor=darkblue,
+pdfauthor={},
+pdftitle={},
+pdfsubject={}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END OF PACAKGE LIST%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Set Margins
+\oddsidemargin 0 cm
+\evensidemargin 0 cm
+\topmargin -1.5 cm \textheight 23 cm \textwidth 16.5 cm
+\raggedbottom
+
+%Load commands defined using amsmath
+\input vsCom.sty
+
+%Commands defined using amsthrm
+\theoremstyle{remark}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%%%%%%%%%%%%%%%%%%%%% Commands for OUTLINE IN TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%INSTRUCTIONS. 
+%- Default is text with outlines, and \ca, \cb (defined with amsmath commands) 
+%  are used to comment out revisions in definitions for other cases. 
+%
+%- TEXT, NO OUTLINE:  \ca -> %\ca, \cb -> %\cb below 'TEXT ALONE'. 
+%- OUTLINE, NO TEXT:  \ca -> %\ca, \cb -> %\cb below 'OUTLINE ALONE'
+%- Newpage. \np for text alone, \nq for text + outline, \nr for outline alone
+%- Material to be EXCLUDED for OUTLINE ALONE is between \xa and \xb. 
+%- Presence of \xb elsewhere does not matter, as it is ignored.
+% 
+% DEFINITIONS
+\def\outl#1{\par{\medskip\noindent\hspace*{0.1cm}\bf
+      \mathversion{bold}#1\mathversion{normal}\smallskip} }
+\def\np{} \def\nq{\newpage } \def\nr{} \def\xa{} \def\xb{} \def\xn{} \def\xp{}
+
+% TEXT ALONE USE %\ca %\cb. INCLUDE OUTLINE: \ca + \cb.  
+%\ca
+ \def\outl#1{}\def\np{\newpage }\def\nq{}\def\xa{}\def\xb{}\def\xn{}\def\xp{}
+%\cb
+
+% OUTLINE ALONE USE %\ca %\cb, OTHERWISE \ca \cb
+\ca
+ \def\outl#1{\par{\medskip\noindent\hspace*{.5cm}\bf
+      \mathversion{bold}#1\mathversion{normal}\smallskip} }
+ \long\def\xa#1\xb{} %This comments out segments from \xa to the next \xb
+ \def\nq{} \def\nr{\newpage }\def\xn{\nopagebreak }\def\xp{\pagebreak }
+\cb
+
+%%%%%%%%%%%%%%%%%%%% END OUTLINE IN TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

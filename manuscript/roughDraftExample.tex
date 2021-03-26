@@ -1,0 +1,66 @@
+\input roughDraftTemplate.tex
+
+%Add your own Watermark
+%If the command below is removed, a default watermark will appear
+\SetWatermarkText{Rough Draft}
+\SetWatermarkColor{red}
+% \SetWatermarkScale{2}
+\SetWatermarkFontSize{15 pt}
+\SetWatermarkHorCenter{500 pt}
+\SetWatermarkVerCenter{25 pt}
+\SetWatermarkAngle{0}
+
+\begin{document}
+
+\begin{center}
+{\bf Title for a Rough Draft} \bsk\\
+    Name~\footnote{email1@website1}~\textsuperscript{1} 
+    and Possibly others~\footnote{email2@website2}~\textsuperscript{2}\\
+{\em \textsuperscript{1} Institution 1.}\\
+{\em \textsuperscript{2} Institution(s)}\\
+Date: March 25, 2021
+\end{center}
+
+\begin{abstract}
+Words
+\end{abstract}
+
+\section{Section}
+\label{Label1}
+\xb
+\outl{Outline for this section}
+\xa
+
+Some more words. \tc{A comment}
+
+\subsection{Sub-Section}
+\label{Label2}
+\xb
+\outl{Outline for this sub-section}
+\xa
+
+Words again, placeholder for a citation~\cites{PaperX}
+
+\begin{equation}
+    a = b + c
+    \label{anEqn}
+\end{equation}
+%
+The equation label shows up on the pdf. Makes it easy to cite an equation number
+~\eqref{Eqn2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\section{An Appendix}
+
+\begin{equation}
+    c = d + e
+    \label{Eqn2}
+\end{equation}
+%
+\tc{See how the equation numbers just continue from the main text. This will be
+taken care of later}
+\end{document}
