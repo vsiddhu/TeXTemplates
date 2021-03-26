@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+
+%Tiks for figures and colors for Citations
+\usepackage{tikz}
+\definecolor{darkblue}{rgb}{0.15,0.35,0.55}
+\definecolor{reddish}{rgb}{.8, 0.2, 0.2}
+
+%Hyperreff is best loaded last, it can conflict with other packages
+\usepackage[pdfpagelabels, linktocpage=true]{hyperref}
+\hypersetup{
+colorlinks=true,
+citecolor=darkblue,
+linkcolor=reddish,
+urlcolor=darkblue,
+pdfauthor={},
+pdftitle={},
+pdfsubject={}
+}
+
+\begin{document}
+
+\begin{center}
+{\bf Example citation} \\
+    Date: March 25, 2021
+\end{center}
+
+
+\section{Section}
+Citation~\cite{AuthorYear} using {\tt vunsrt} creates a clickable to the 
+{\tt doi} when used along with the hyperref package 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{aBibFile}
+\bibliographystyle{vunsrt}
+
+
+\end{document}
